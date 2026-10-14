@@ -1,0 +1,976 @@
+
+/* ===================================
+   ALMA CAFÉ
+   IDENTIDAD VISUAL Y ESTILOS GENERALES
+=================================== */
+
+:root {
+  --espresso: #493126;
+  --cafe-tostado: #795849;
+  --terracota: #c98768;
+  --crema: #f8f1e7;
+  --dorado: #d4aa71;
+  --blanco: #ffffff;
+  --texto-secundario: #716157;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--crema);
+  color: var(--espresso);
+}
+
+a {
+  text-decoration: none;
+}
+
+/* ===================================
+   ENCABEZADO
+=================================== */
+
+.encabezado {
+  width: 100%;
+  background-color: var(--espresso);
+  padding: 20px 6%;
+}
+
+.contenedor-encabezado {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+/* LOGOTIPO */
+
+.logo {
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+}
+
+.logo-nombre {
+  color: var(--crema);
+  font-size: 32px;
+  font-weight: 700;
+  letter-spacing: -2px;
+  line-height: 1;
+}
+
+.logo-subtitulo {
+  color: var(--dorado);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 5px;
+  margin-top: 6px;
+}
+
+/* NAVEGACIÓN */
+
+.navegacion {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 28px;
+}
+
+.navegacion a {
+  color: var(--crema);
+  font-size: 14px;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.navegacion a:hover {
+  color: var(--dorado);
+}
+
+/* ===================================
+   ADAPTACIÓN INICIAL A CELULARES
+=================================== */
+
+
+/* ===================================
+   MENÚ DE NAVEGACIÓN MÓVIL
+=================================== */
+
+.boton-menu {
+  display: none;
+}
+
+@media (max-width: 700px) {
+
+  .contenedor-encabezado {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+  }
+
+  .boton-menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+    border: 1px solid var(--dorado);
+    border-radius: 8px;
+    background-color: transparent;
+    color: var(--crema);
+    font-size: 25px;
+    cursor: pointer;
+  }
+
+  .navegacion {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    gap: 0;
+    padding: 12px 0;
+  }
+
+  .navegacion.abierta {
+    display: flex;
+  }
+
+  .navegacion a {
+    display: block;
+    width: 100%;
+    padding: 13px 10px;
+    font-size: 15px;
+    text-align: left;
+  }
+}
+
+
+/* ===================================
+   PORTADA PRINCIPAL - HERO
+=================================== */
+
+.portada {
+  min-height: 85vh;
+  display: flex;
+  align-items: center;
+  padding: 90px 0;
+  background-image:
+   linear-gradient(rgba(27, 18, 14, 0.72), rgba(27, 18, 14, 0.72)),
+    url("../imagenes/portada-cafe.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.portada-contenido {
+  max-width: 690px;
+}
+
+.portada-etiqueta {
+  display: inline-block;
+  margin-bottom: 22px;
+  letter-spacing: 4px;
+  font-size: 0.82rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #f0c48a;
+}
+.portada h1 {
+  font-size: 4.5rem;
+  line-height: 1.05;
+  max-width: 700px;
+  margin-bottom: 24px;
+  color: #fff8f0;
+  text-shadow: 0 3px 12px rgba(0, 0, 0, 0.35);
+}
+
+.portada p {
+  max-width: 620px;
+  font-size: 1.15rem;
+  line-height: 1.8;
+  margin-bottom: 32px;
+  color: #f6ede3;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+.boton-principal {
+  display: inline-block;
+  padding: 16px 30px;
+  background-color: var(--terracota);
+  color: #231610;
+  border-radius: 7px;
+  font-size: 14px;
+  font-weight: 700;
+  transition: background-color 0.2s ease;
+}
+
+.boton-principal:hover {
+  background-color: var(--dorado);
+}
+
+/* PORTADA EN CELULARES */
+
+@media (max-width: 700px) {
+  .portada {
+    min-height: 570px;
+    padding: 70px 6%;
+    background-position: center;
+  }
+
+
+.portada h1 {
+  font-size: clamp(32px, 9vw, 42px);
+  line-height: 1.15;
+  letter-spacing: -1px;
+  margin-bottom: 20px;
+}
+
+
+  .portada p {
+    font-size: 15px;
+  }
+}
+
+/* ===================================
+   SECCIÓN NUESTRO MENÚ
+=================================== */
+
+.seccion-menu {
+  background-color: var(--crema);
+  padding: 95px 6%;
+}
+
+.contenedor-menu {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* ENCABEZADO DE SECCIÓN */
+
+.encabezado-seccion {
+  max-width: 680px;
+  margin: 0 auto 50px;
+  text-align: center;
+}
+
+.etiqueta-seccion {
+  color: var(--terracota);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 3px;
+}
+
+.encabezado-seccion h2 {
+  color: var(--espresso);
+  font-size: clamp(32px, 4vw, 48px);
+  letter-spacing: -1px;
+  margin: 16px 0;
+}
+
+.encabezado-seccion p {
+  color: var(--texto-secundario);
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+/* CUADRÍCULA DE PRODUCTOS */
+
+.cuadricula-menu {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 26px;
+}
+
+/* TARJETAS */
+
+.tarjeta-producto {
+  background-color: var(--blanco);
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 8px 30px rgba(73, 49, 38, 0.08);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.tarjeta-producto:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 40px rgba(73, 49, 38, 0.14);
+}
+
+/* ESPACIO PARA LAS FOTOGRAFÍAS */
+
+.imagen-producto {
+  height: 230px;
+  background-color: #d9c5b1;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* ===================================
+   FOTOGRAFÍA DEL CAPPUCCINO
+=================================== */
+
+.tarjeta-producto:nth-child(1) .imagen-producto {
+  background-image: url("../imagenes/producto-cappuccino.jpg");
+}
+
+/* ===================================
+   FOTOGRAFÍA DEL ICED CARAMEL LATTE
+=================================== */
+
+.tarjeta-producto:nth-child(2) .imagen-producto {
+  background-image: url("../imagenes/producto-caramel-latte.jpg");
+}
+
+/* ===================================
+   FOTOGRAFÍA DEL ALMOND CROISSANT
+=================================== */
+
+.tarjeta-producto:nth-child(3) .imagen-producto {
+  background-image: url("../imagenes/producto-almond-croissant.jpg");
+}
+
+/* ===================================
+   FOTOGRAFÍA DEL ESPRESSO
+=================================== */
+
+.tarjeta-producto:nth-child(4) .imagen-producto {
+  background-image: url("../imagenes/producto-espresso.jpg");
+}
+
+/* ===================================
+   FOTOGRAFÍA DEL MATCHA LATTE
+=================================== */
+
+.tarjeta-producto:nth-child(5) .imagen-producto {
+  background-image: url("../imagenes/producto-matcha-latte.jpg");
+}
+
+/* ===================================
+   FOTOGRAFÍA DEL CHOCOLATE BROWNIE
+=================================== */
+
+.tarjeta-producto:nth-child(6) .imagen-producto {
+  background-image: url("../imagenes/producto-chocolate-brownie.jpg");
+}
+
+
+
+
+
+
+
+/* INFORMACIÓN DEL PRODUCTO */
+
+.informacion-producto {
+  padding: 25px;
+}
+
+.informacion-producto h3 {
+  color: var(--espresso);
+  font-size: 23px;
+  margin: 0 0 12px;
+}
+
+.informacion-producto p {
+  color: var(--texto-secundario);
+  font-size: 14px;
+  line-height: 1.7;
+  min-height: 48px;
+  margin: 0 0 20px;
+}
+
+.precio-producto {
+  display: inline-block;
+  color: #9b5439;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+/* DISEÑO PARA TABLETAS */
+
+@media (max-width: 900px) {
+  .cuadricula-menu {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* DISEÑO PARA CELULARES */
+
+@media (max-width: 600px) {
+  .seccion-menu {
+    padding: 65px 5%;
+  }
+
+  .cuadricula-menu {
+    grid-template-columns: 1fr;
+    gap: 22px;
+  }
+
+  .imagen-producto {
+    height: 235px;
+  }
+
+  .informacion-producto {
+    padding: 22px;
+  }
+
+  .encabezado-seccion {
+    margin-bottom: 35px;
+  }
+}
+
+/* ===================================
+   SECCIÓN OUR FAVORITES
+=================================== */
+
+.seccion-especialidades {
+  background-color: var(--espresso);
+  padding: 100px 6%;
+}
+
+.contenedor-especialidades {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* ENCABEZADO DE ESPECIALIDADES */
+
+.seccion-especialidades .encabezado-seccion {
+  max-width: 700px;
+  margin: 0 auto 55px;
+  text-align: center;
+}
+
+.seccion-especialidades .etiqueta-seccion {
+  color: var(--dorado);
+}
+
+.seccion-especialidades .encabezado-seccion h2 {
+  color: var(--crema);
+}
+
+.seccion-especialidades .encabezado-seccion p {
+  color: #e0d0c3;
+}
+
+/* TARJETAS DE ESPECIALIDADES */
+
+.cuadricula-especialidades {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 28px;
+}
+
+.tarjeta-especialidad {
+  background-color: #f8f1e7;
+  border-radius: 18px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.tarjeta-especialidad:hover {
+  transform: translateY(-6px);
+}
+
+.imagen-especialidad {
+  height: 260px;
+  background-color: #c7aa91;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* FOTOGRAFÍA DE CRAFTED WITH PASSION */
+
+.cuadricula-especialidades .tarjeta-especialidad:nth-child(1) .imagen-especialidad {
+  background-image: url("../imagenes/especialidad-cafe.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* FOTOGRAFÍA DE MADE FRESH EVERY DAY */
+
+.cuadricula-especialidades .tarjeta-especialidad:nth-child(2) .imagen-especialidad {
+  background-image: url("../imagenes/made-fresh.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+/* FOTOGRAFÍA DE A PLACE TO SLOW DOWN */
+
+.cuadricula-especialidades .tarjeta-especialidad:nth-child(3) .imagen-especialidad {
+  background-image: url("../imagenes/cafe-amigos.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+
+.contenido-especialidad {
+  padding: 30px;
+}
+
+.contenido-especialidad span {
+  color: #a36e50;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.contenido-especialidad h3 {
+  color: var(--espresso);
+  font-size: 25px;
+  line-height: 1.3;
+  margin: 17px 0;
+}
+
+.contenido-especialidad p {
+  color: var(--texto-secundario);
+  font-size: 14px;
+  line-height: 1.8;
+  margin: 0;
+}
+
+/* ADAPTACIÓN PARA TABLETS */
+
+@media (max-width: 900px) {
+  .cuadricula-especialidades {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* ADAPTACIÓN PARA CELULARES */
+
+@media (max-width: 600px) {
+  .seccion-especialidades {
+    padding: 70px 5%;
+  }
+
+  .cuadricula-especialidades {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .imagen-especialidad {
+    height: 240px;
+  }
+
+  .contenido-especialidad {
+    padding: 25px;
+  }
+}
+
+/* ===================================
+   SECCIÓN OUR STORY
+=================================== */
+
+.seccion-nosotros {
+  background-color: var(--crema);
+  padding: 110px 6%;
+}
+
+.contenedor-nosotros {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 75px;
+}
+
+/* FOTOGRAFÍA PRINCIPAL */
+
+.imagen-nosotros {
+  width: 100%;
+  min-height: 540px;
+  border-radius: 20px;
+  background-color: #d4bda5;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  box-shadow: 0 18px 45px rgba(73, 49, 38, 0.12);
+}
+
+/* FOTOGRAFÍA DE OUR STORY */
+
+.imagen-nosotros {
+  background-image: url("../imagenes/historia-cafe.jpg");
+}
+
+
+/* CONTENIDO DE NUESTRA HISTORIA */
+
+.contenido-nosotros h2 {
+  color: var(--espresso);
+  font-size: clamp(38px, 4vw, 54px);
+  margin: 18px 0 25px;
+  letter-spacing: -1px;
+}
+
+.contenido-nosotros h3 {
+  color: var(--cafe-tostado);
+  font-size: 23px;
+  font-weight: 500;
+  line-height: 1.5;
+  margin: 0 0 25px;
+}
+
+.contenido-nosotros p {
+  color: var(--texto-secundario);
+  font-size: 16px;
+  line-height: 1.9;
+  margin-bottom: 20px;
+}
+
+.contenido-nosotros .frase-nosotros {
+  color: var(--espresso);
+  font-size: 19px;
+  font-weight: 700;
+  font-style: italic;
+  margin: 28px 0;
+}
+
+/* BOTÓN VISIT OUR CAFÉ */
+
+.boton-nosotros {
+  display: inline-block;
+  background-color: var(--espresso);
+  color: var(--blanco);
+  padding: 16px 30px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 700;
+  transition: background-color 0.3s ease;
+}
+
+.boton-nosotros:hover {
+  background-color: var(--terracota);
+}
+
+/* ADAPTACIÓN PARA TABLETS */
+
+@media (max-width: 900px) {
+  .contenedor-nosotros {
+    grid-template-columns: 1fr;
+    gap: 45px;
+  }
+
+  .imagen-nosotros {
+    min-height: 420px;
+  }
+}
+
+/* ADAPTACIÓN PARA CELULARES */
+
+@media (max-width: 600px) {
+  .seccion-nosotros {
+    padding: 70px 5%;
+  }
+
+  .imagen-nosotros {
+    min-height: 330px;
+  }
+
+  .contenido-nosotros h3 {
+    font-size: 20px;
+  }
+
+  .contenido-nosotros p {
+    font-size: 15px;
+  }
+}
+
+/* ===================================
+   SECCIÓN VISIT US
+=================================== */
+
+.seccion-contacto {
+  background-color: #ffffff;
+  padding: 100px 6%;
+}
+
+.contenedor-contacto {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* DISTRIBUCIÓN PRINCIPAL */
+
+.cuadricula-contacto {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+  align-items: stretch;
+  margin-top: 55px;
+}
+
+/* INFORMACIÓN DE CONTACTO */
+
+.informacion-contacto {
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+  padding: 20px 0;
+}
+
+/* AVISO DE NEGOCIO FICTICIO */
+
+.aviso-demostracion {
+  background-color: #f8f1e7;
+  border-left: 3px solid var(--terracota);
+  border-radius: 4px;
+  padding: 14px 18px;
+  color: var(--texto-secundario);
+  font-size: 13px;
+  line-height: 1.7;
+  margin: 0;
+}
+
+
+.detalle-contacto {
+  border-bottom: 1px solid #e7d9ca;
+  padding-bottom: 25px;
+}
+
+.detalle-contacto:last-child {
+  border-bottom: none;
+}
+
+.titulo-detalle {
+  color: var(--terracota);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.detalle-contacto h3 {
+  color: var(--espresso);
+  font-size: 24px;
+  margin: 14px 0;
+}
+
+.detalle-contacto p {
+  color: var(--texto-secundario);
+  font-size: 15px;
+  line-height: 1.9;
+  margin: 0;
+}
+
+/* TARJETA DE BIENVENIDA */
+
+.imagen-contacto {
+  min-height: 500px;
+  border-radius: 22px;
+  background-color: var(--espresso);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 45px;
+  text-align: center;
+  overflow: hidden;
+}
+
+.mensaje-contacto {
+  max-width: 390px;
+}
+
+.mensaje-contacto span {
+  color: var(--dorado);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 4px;
+}
+
+.mensaje-contacto h3 {
+  color: var(--crema);
+  font-size: clamp(30px, 3.5vw, 47px);
+  line-height: 1.2;
+  margin: 25px 0;
+}
+
+.mensaje-contacto p {
+  color: #e3d4c6;
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+/* ADAPTACIÓN PARA TABLETS */
+
+@media (max-width: 900px) {
+  .cuadricula-contacto {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .imagen-contacto {
+    min-height: 400px;
+  }
+}
+
+/* ADAPTACIÓN PARA CELULARES */
+
+@media (max-width: 600px) {
+  .seccion-contacto {
+    padding: 70px 5%;
+  }
+
+  .cuadricula-contacto {
+    margin-top: 35px;
+  }
+
+  .informacion-contacto {
+    gap: 25px;
+  }
+
+  .detalle-contacto h3 {
+    font-size: 21px;
+  }
+
+  .imagen-contacto {
+    min-height: 350px;
+    padding: 30px 20px;
+  }
+}
+
+/* ===================================
+   PIE DE PÁGINA - ALMA CAFÉ
+=================================== */
+
+.pie-pagina {
+  background-color: var(--espresso);
+  color: var(--crema);
+  padding: 65px 6% 25px;
+}
+
+.contenedor-pie {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 50px;
+  padding-bottom: 50px;
+}
+
+/* IDENTIDAD DE MARCA */
+
+.marca-pie {
+  max-width: 350px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.nombre-pie {
+  font-size: 42px;
+  font-weight: 700;
+  letter-spacing: -2px;
+  line-height: 1;
+}
+
+.subtitulo-pie {
+  color: var(--dorado);
+  font-size: 12px;
+  letter-spacing: 5px;
+  margin-top: 7px;
+}
+
+.marca-pie p {
+  color: #e0d0c3;
+  font-size: 14px;
+  line-height: 1.8;
+  margin-top: 22px;
+}
+
+/* ENLACES DE NAVEGACIÓN */
+
+.enlaces-pie {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 15px 25px;
+  padding-top: 15px;
+}
+
+.enlaces-pie a {
+  color: var(--crema);
+  font-size: 14px;
+  transition: color 0.3s ease;
+}
+
+.enlaces-pie a:hover {
+  color: var(--dorado);
+}
+
+/* PARTE INFERIOR */
+
+.parte-inferior-pie {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-top: 22px;
+  border-top: 1px solid rgba(255, 255, 255, 0.18);
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.parte-inferior-pie p {
+  color: #cbbbae;
+  font-size: 12px;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* ADAPTACIÓN PARA TABLETS */
+
+@media (max-width: 900px) {
+  .contenedor-pie {
+    flex-direction: column;
+    gap: 25px;
+  }
+
+  .enlaces-pie {
+    justify-content: flex-start;
+    padding-top: 0;
+  }
+}
+
+/* ADAPTACIÓN PARA CELULARES */
+
+@media (max-width: 600px) {
+  .pie-pagina {
+    padding: 50px 5% 25px;
+  }
+
+  .contenedor-pie {
+    padding-bottom: 35px;
+  }
+
+  .nombre-pie {
+    font-size: 38px;
+  }
+
+  .enlaces-pie {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .parte-inferior-pie {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+
